@@ -11,4 +11,8 @@
         <li><strong>Available Copies:</strong> {{ num_availables }}</li>
         <li><strong>Authors:</strong> {{ num_authors }}</li>
     </ul>
+
+    <p>
+        You have visited this page {{ num_visits }} time{% if num_visits != 1 %}s{% endif %}
+    </p>
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_generics.html" %}
+
+{% block content %}
+    <h1>Author list</h1>
+    {% if author_list %}
+    <ul>
+        {% for author in author_list %}
+            <li>
+                <a href="{{ author.get_abs_url }}">
+                    {{ author.first_name }}, {{ author.last_name }} ({{ author.date_of_birth }} - {{ author.date_of_death }})
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>There are no books in the library.</p>
+    {% endif %}
+{% endblock %}
